@@ -7,9 +7,9 @@ metadata:
 spec:
   tls:
     - hosts:
-        - example.demo.dev.sspcloud.fr
+        - vscode.demo.dev.sspcloud.fr
   rules:
-    - host: example.demo.dev.sspcloud.fr
+    - host: vscode.demo.dev.sspcloud.fr
       http:
         paths:
           - path: /
