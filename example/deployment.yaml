@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vscode-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vscode-deployment
+  template:
+    metadata:
+      labels:
+        app: vscode-deployment
+    spec:
+      containers:
+        - name: vscode-deployment
+          image: codercom/code-server
+          env:
+            - name: PASSWORD
+              value: Donatien
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
